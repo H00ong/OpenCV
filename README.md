@@ -8,6 +8,6 @@ openCV를 이용한 녹화 프로그램
 5. tap을 누르면 기본 재생 속도와 fps로 돌아온다.
 6. ESC를 눌러서 프로그램을 종료한다.
 # 시연 영상
-[video](https://youtu.be/Xvkhfg07ApI)
+[video](https://youtu.be/pbcn0kaDxvc)
 # 결과 영상
-[video](https://youtu.be/SxunVjfC3KY)
+[video](https://youtu.be/BXTJDhiU1k0)
