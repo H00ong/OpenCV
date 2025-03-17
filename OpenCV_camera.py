@@ -18,7 +18,6 @@ record_Mode = False
 speed_table = [1/2, 1, 1.5, 2, 3]
 default_fps_index = 1
 current_fps_index = default_fps_index
-# 초기 fps는 speed_table 값을 사용 (여기서는 1)
 
 while True:
     # 프레임 읽기
@@ -42,7 +41,6 @@ while True:
 
     # 오른쪽에 FPS 및 배속 정보 텍스트 표시
     info = f'fps: {fps} (x{speed_table[current_fps_index]})'
-    print(info)
     cv2.putText(frame, info, (30, 100),
                 cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 255), 2)
     cv2.imshow('frame', frame)
