@@ -31,6 +31,11 @@ while True:
     # 키 입력 처리: waitKey의 반환 값은 업데이트된 wait_msec을 기준으로 합니다.
     key = cv2.waitKey(wait_msec)
 
+    # 오른쪽에 FPS 및 배속 정보 텍스트 표시
+    info = f'fps: {fps} (x{speed_table[current_fps_index]})'
+    cv2.putText(frame, info, (30, 100),
+                cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 255), 2)
+
     if record_Mode:
         # 녹화 모드: 빨간 원 그리기 및 프레임 저장
         cv2.circle(frame, (30, 30), 15, (0, 0, 255), -1)
@@ -39,10 +44,7 @@ while True:
         # 프리뷰 모드: 하얀 원 그리기
         cv2.circle(frame, (30, 30), 15, (255, 255, 255), -1)
 
-    # 오른쪽에 FPS 및 배속 정보 텍스트 표시
-    info = f'fps: {fps} (x{speed_table[current_fps_index]})'
-    cv2.putText(frame, info, (30, 100),
-                cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 255), 2)
+    
     cv2.imshow('frame', frame)
 
     # 키 이벤트 처리
